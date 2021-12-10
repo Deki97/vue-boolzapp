@@ -17,6 +17,10 @@ img {
 i {
     font-size: 20px;
 }
+
+ul {
+    list-style-type: none;
+}
 /* END COMMON */
 
 .app-container {
@@ -37,7 +41,7 @@ i {
     width: 35%;
     
     /* test */
-    background-color: blue;
+    background-color: white;
     height: 700px;
 }
 
@@ -59,6 +63,10 @@ i {
 .my-user-info {
     display: flex;
     align-items: center;
+}
+
+.my-user-info span {
+    font-weight: bold;
 }
 
 .my-user {
@@ -108,4 +116,68 @@ i {
 
 .notifications-text {
     padding-left: 10px;
+}
+
+/* Search chats */
+input {
+    width: 98%;
+    margin: auto;
+}
+
+.search-chats {
+    background-color: #eaeaea;
+}
+
+/* Users list */
+.users-list img {
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: text-top;
+}
+
+.users-list span {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+/* END LEFT COLUMN */
+
+
+/* RIGHT COLUMN */
+.current-user {
+    background-color: #eaeaea;
+    border-left: 1px solid lightgrey;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-user-image img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.current-user-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-last-seen {
+    font-size: 12px;
+    color: #52798a;
+}
+
+.current-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.current-user-actions i {
+    padding: 0 5px;
+    color: #b1b1b1;
 }
