@@ -53,7 +53,7 @@
 
                         <div class="users-list">
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <img src="img/avatar_1.jpg" alt="Avatar 1">
                                     <span>Michele</span>
                                 </li>
@@ -68,6 +68,10 @@
                                 <li>
                                     <img src="img/avatar_4.jpg" alt="Avatar 4">
                                     <span>Luisa</span>
+                                </li> -->
+                                <li v-for="contact in contacts">
+                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                    <span>{{ contact.name }}</span>
                                 </li>
                             </ul>
                         </div>
