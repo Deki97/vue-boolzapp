@@ -68,6 +68,7 @@ ul {
 
 .my-user-info span {
     font-weight: bold;
+    font-size: 14px;
 }
 
 .my-user {
@@ -121,10 +122,18 @@ ul {
 
 /* Search chats */
 .search-chats input {
-    width: 98%;
+    width: 90%;
     margin: auto;
+    padding: 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin: 5px 0;
 }
 
+.search-chats i {
+    font-size: 14px;
+    padding-left: 10px;
+}
 .search-chats {
     background-color: #eaeaea;
 }
@@ -142,11 +151,13 @@ ul {
 .users-list span {
     padding-left: 10px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
 }
 /* END LEFT COLUMN */
 
@@ -227,3 +238,16 @@ ul li {
 }
 
 /* End type message */
+
+.active {
+    background-color: lightgrey;
+}
+
+/* Gestione messaggi tra utente e interlocutore */
+.sent-message {
+    background-color: #d5f9ba;
+}
+
+.received-message {
+    background-color: #ffffff;
+}
