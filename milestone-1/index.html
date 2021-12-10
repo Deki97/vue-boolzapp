@@ -70,7 +70,7 @@
                                     <span>Luisa</span>
                                 </li> -->
                                 <li v-for="contact in contacts">
-                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>
                             </ul>
