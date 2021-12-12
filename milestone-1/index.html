@@ -108,7 +108,18 @@
                         </div>
 
                         <div class="current-chat">
-                            
+                            <ul>
+                                <!-- <li class="sent-message">
+                                    Ciao!
+                                </li>
+
+                                <li class="received-message">
+                                    Ciao Dejan!
+                                </li> -->
+                                <li v-for="(element, index) in contacts[2].messages">
+                                    {{ element.text }}
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="type-message">

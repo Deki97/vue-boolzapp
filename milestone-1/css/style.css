@@ -39,7 +39,7 @@ ul {
 
 .column-left {
     width: 35%;
-    
+
     /* test */
     background-color: white;
     /* height: 700px; */
@@ -155,7 +155,7 @@ ul {
     font-size: 14px;
 }
 
-ul li {
+.users-list ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #eaeaea;
     cursor: pointer;
@@ -247,8 +247,10 @@ ul li {
 /* Gestione messaggi tra utente e interlocutore */
 .sent-message {
     background-color: #d5f9ba;
+    text-align: right;
 }
 
 .received-message {
     background-color: #ffffff;
+    text-align: left;
 }
