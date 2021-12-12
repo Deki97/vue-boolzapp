@@ -209,6 +209,20 @@ ul {
 /* Current chat */
 .current-chat {
     flex-grow: 1;
+    width: 85%;
+    margin: auto;
+}
+
+.current-chat ul {
+    margin-top: 40px;
+}
+
+.current-chat li {
+    font-size: 12px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px 0;
 }
 /* End current chat */
 
@@ -245,12 +259,10 @@ ul {
 }
 
 /* Gestione messaggi tra utente e interlocutore */
-.sent-message {
+.sent {
     background-color: #d5f9ba;
-    text-align: right;
 }
 
-.received-message {
+.received {
     background-color: #ffffff;
-    text-align: left;
 }

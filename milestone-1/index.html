@@ -116,8 +116,10 @@
                                 <li class="received-message">
                                     Ciao Dejan!
                                 </li> -->
-                                <li v-for="(element, index) in contacts[2].messages">
+                                <li v-for="(element, index) in contacts[2].messages"
+                                :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
+                                    <!-- <span>{{ element.date}}</span> -->
                                 </li>
                             </ul>
                         </div>
