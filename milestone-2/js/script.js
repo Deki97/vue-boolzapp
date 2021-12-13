@@ -1,6 +1,6 @@
 // Milestone 2
-// Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-// Click sul contatto mostra la conversazione del contatto cliccato
+// [x] Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+// [x] Click sul contatto mostra la conversazione del contatto cliccato
 
 // Milestone 3
 // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
@@ -16,6 +16,7 @@ const app = new Vue(
     {
         el: '#root',
         data: {
+            activeContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -103,7 +104,10 @@ const app = new Vue(
             ]
         },
         methods: {
-
+            changeContact: function(index) {
+                this.activeContact = index;
+                // alert(this.activeContact);
+            }
         }
     }
 );

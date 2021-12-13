@@ -70,7 +70,7 @@
                                     <img src="img/avatar_4.jpg" alt="Avatar 4">
                                     <span>Luisa</span>
                                 </li> -->
-                                <li v-for="contact in contacts">
+                                <li @click="changeContact(index)" v-for="(contact, index) in contacts">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>
@@ -85,13 +85,17 @@
                         <!-- MAIN ACTIVE CHAT -->
                         <div class="current-user">
                             <div class="current-user-info">
-                                <div class="current-user-image">
-                                    <img src="img/avatar_3.jpg" alt="Avatar 3">
+                                <div v-for="contact in contacts[activeContact].avatar" class="current-user-image">
+                                    <!-- <img src="img/avatar_3.jpg" alt="Avatar 3"> -->
+                                    <!-- <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name"> -->
+                                    <!-- {{ contact }} -->
+                                    <img :src="'img/avatar_' + contact + '.jpg'" alt="">
                                 </div>
 
                                 <div class="current-user-text">
-                                    <div class="current-user-name">
-                                        Samuele
+                                    <div v-for="contact in contacts[activeContact].name" class="current-user-name">
+                                        {{ contact }}
+                                        <!-- Samuele -->
                                     </div>
 
                                     <div class="user-last-seen">
@@ -116,7 +120,7 @@
                                 <li class="received-message">
                                     Ciao Dejan!
                                 </li> -->
-                                <li v-for="(element, index) in contacts[2].messages"
+                                <li v-for="(element, index) in contacts[activeContact].messages"
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
                                     <!-- <span>{{ element.date}}</span> -->
