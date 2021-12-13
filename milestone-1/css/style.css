@@ -29,29 +29,31 @@ ul {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #009588;
+    background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+    min-width: 950px;
+
 }
 
 .boolzapp-container {
     width: 80%;
     display: flex;
+    height: 100%;
 }
 
 .column-left {
     width: 35%;
-
-    /* test */
     background-color: white;
-    /* height: 700px; */
+    height: 100%;
+    overflow: hidden;
 }
 
 .column-right {
     width: 65%;
     display: flex;
     flex-direction: column;
-    /* test */
     background-image: url('../img/mine.jpg');
-    /* height: 700px; */
+    height: 100%;
+    overflow: hidden;
 }
 
 /* COLUMN LEFT */
@@ -140,7 +142,9 @@ ul {
 }
 
 .users-list {
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
+    overflow-y: auto;
+    flex-grow: 1;
 }
 /* Users list */
 .users-list img {
@@ -211,6 +215,7 @@ ul {
     flex-grow: 1;
     width: 85%;
     margin: auto;
+    overflow-y: auto;
 }
 
 .current-chat ul {
@@ -223,6 +228,9 @@ ul {
     border-radius: 10px;
     text-align: left;
     margin: 5px 0;
+    max-width: 50%;
+    min-width: 30%;
+    display: inline-block;
 }
 /* End current chat */
 
@@ -261,8 +269,12 @@ ul {
 /* Gestione messaggi tra utente e interlocutore */
 .sent {
     background-color: #d5f9ba;
+    float: right;
+    clear: both;
 }
 
 .received {
     background-color: #ffffff;
+    float: left;
+    clear: both;
 }
