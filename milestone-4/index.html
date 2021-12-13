@@ -16,7 +16,6 @@
             <div class="boolzapp-container">
                 <!-- COLUMN LEFT -->
                     <div class="column-left">
-                        <!-- CHAT LISTS -->
                         <div class="my-user">
                             <div class="my-user-info">
                                 <img src="img/avatar_io.jpg" alt="My Avatar">
@@ -30,6 +29,7 @@
                             </div>
                         </div>
 
+                        <!-- Notifications -->
                         <div class="notifications">
                             <div class="notifications-logo">
                                 <i class="fas fa-bell-slash"></i>
@@ -46,12 +46,14 @@
                             </div>
                         </div>
 
+                        <!-- Search chats -->
                         <div class="search-chats">
                             <i class="fas fa-search"></i>
                             <input @keyup="searchUserList" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchResult">
                             
                         </div>
 
+                        <!-- CHAT LISTS -->
                         <div class="users-list">
                             <ul>
                                 <!-- <li>
@@ -92,6 +94,7 @@
                                     <img :src="'img/avatar_' + contact + '.jpg'" alt="">
                                 </div>
 
+                                <!-- Current user top info -->
                                 <div class="current-user-text">
                                     <div class="current-user-name">
                                         {{ contacts[activeContact].name }}
@@ -101,13 +104,16 @@
                                         Ultimo accesso oggi alle
                                     </div>
                                 </div>
+                                <!-- End current user top info -->
                             </div>
 
+                            <!-- Current user icons -->
                             <div class="current-user-actions">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
                                 <i class="fas fa-ellipsis-v"></i>
                             </div>
+                            <!-- End current user icons -->
                         </div>
 
                         <div class="current-chat">
@@ -127,6 +133,7 @@
                             </ul>
                         </div>
 
+                        <!-- Type message -->
                         <div class="type-message">
                             <div class="emoji">
                                 <i class="far fa-smile"></i>
@@ -140,6 +147,8 @@
                                 <i class="fas fa-microphone"></i>
                             </div>
                         </div>
+                        <!-- End type message -->
+
                         <!-- END MAIN ACTIVE CHAT -->
                     </div>
                 <!-- END COLUMN RIGHT -->
@@ -148,7 +157,10 @@
     </div>
     
 
+    <!-- Day.js Library -->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+    
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -40,6 +40,8 @@ ul {
     height: 100%;
 }
 
+
+/* COLUMN LEFT */
 .column-left {
     width: 35%;
     background-color: white;
@@ -47,16 +49,6 @@ ul {
     overflow: hidden;
 }
 
-.column-right {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    background-image: url('../img/mine.jpg');
-    height: 100%;
-    overflow: hidden;
-}
-
-/* COLUMN LEFT */
 /* My user info */
 .my-user-info img {
     width: 45px;
@@ -122,6 +114,7 @@ ul {
     padding-left: 10px;
 }
 
+
 /* Search chats */
 .search-chats input {
     width: 90%;
@@ -142,10 +135,10 @@ ul {
 }
 
 .users-list {
-    /* margin-bottom: 200px; */
     overflow-y: auto;
     flex-grow: 1;
 }
+
 /* Users list */
 .users-list img {
     width: 50px;
@@ -168,6 +161,14 @@ ul {
 
 
 /* RIGHT COLUMN */
+.column-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/mine.jpg');
+    height: 100%;
+    overflow: hidden;
+}
 
 /* Current user */
 .current-user {
@@ -275,13 +276,16 @@ ul {
     background-color: lightgrey;
 }
 
+
 /* Gestione messaggi tra utente e interlocutore */
+/* Sent messages */
 .sent {
     background-color: #d5f9ba;
     float: right;
     clear: both;
 }
 
+/* Received messages */
 .received {
     background-color: #ffffff;
     float: left;
