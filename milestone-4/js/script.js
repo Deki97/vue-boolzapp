@@ -18,6 +18,7 @@ const app = new Vue(
         data: {
             myMessage: '',
             activeContact: 0,
+            searchResult: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -135,7 +136,11 @@ const app = new Vue(
                 }, 1000);
             },
             getCurrentDateAndTime() {
-                return dayjs().format("DD/MM/YY HH:mm:ss");
+                return dayjs().format("DD/MM/YYYY HH:mm:ss");
+            },
+            searchUserList: function() {
+                alert(this.searchResult);
+
             }
         }
     }

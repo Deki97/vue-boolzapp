@@ -48,7 +48,7 @@
 
                         <div class="search-chats">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input @keyup="searchUserList" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchResult">
                             
                         </div>
 
