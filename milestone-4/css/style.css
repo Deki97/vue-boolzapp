@@ -231,6 +231,15 @@ ul {
     max-width: 50%;
     min-width: 30%;
     display: inline-block;
+    position: relative;
+}
+
+.single-message-date {
+    position: absolute;
+    right: 7px;
+    bottom: 2px;
+    font-size: 9px;
+    color: grey;
 }
 /* End current chat */
 

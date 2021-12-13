@@ -122,7 +122,7 @@
                                 <li v-for="(element, index) in contacts[activeContact].messages"
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
-                                    <!-- <span>{{ element.date}}</span> -->
+                                    <div class="single-message-date">{{ element.date}}</div>
                                 </li>
                             </ul>
                         </div>
@@ -147,6 +147,8 @@
         </div>
     </div>
     
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
