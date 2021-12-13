@@ -1,0 +1,280 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+i {
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+/* END COMMON */
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+    min-width: 950px;
+
+}
+
+.boolzapp-container {
+    width: 80%;
+    display: flex;
+    height: 100%;
+}
+
+.column-left {
+    width: 35%;
+    background-color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+.column-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/mine.jpg');
+    height: 100%;
+    overflow: hidden;
+}
+
+/* COLUMN LEFT */
+/* My user info */
+.my-user-info img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.my-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.my-user-info span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.my-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #eaeaea;
+}
+
+.my-user-actions i {
+    padding: 0 5px;
+    color: #b1b1b1;
+}
+
+/* Notifications */
+.notifications {
+    background-color: #8edafb;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+}
+
+.receive-notifications {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.active-notifications {
+    font-size: 12px;
+    color: #52798a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.notifications-logo {
+    background-color: white;
+    border-radius: 50%;
+}
+.notifications-logo i {
+    padding: 10px 7px;
+    color: #8edafb;
+    font-size: 18px;
+}
+
+.notifications-text {
+    padding-left: 10px;
+}
+
+/* Search chats */
+.search-chats input {
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 10px;
+}
+
+.search-chats i {
+    font-size: 14px;
+    padding-left: 10px;
+}
+.search-chats {
+    background-color: #eaeaea;
+}
+
+.users-list {
+    /* margin-bottom: 200px; */
+    overflow-y: auto;
+    flex-grow: 1;
+}
+/* Users list */
+.users-list img {
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: text-top;
+}
+
+.users-list span {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.users-list ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
+}
+/* END LEFT COLUMN */
+
+
+/* RIGHT COLUMN */
+
+/* Current user */
+.current-user {
+    background-color: #eaeaea;
+    border-left: 1px solid lightgrey;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-user-image img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.current-user-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-last-seen {
+    font-size: 12px;
+    color: #52798a;
+}
+
+.current-user-text {
+    padding-left: 15px;
+}
+
+.current-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.current-user-actions i {
+    padding: 0 5px;
+    color: #b1b1b1;
+}
+/* End current user */
+
+
+/* Current chat */
+.current-chat {
+    flex-grow: 1;
+    width: 85%;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.current-chat ul {
+    margin-top: 40px;
+}
+
+.current-chat li {
+    font-size: 12px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px 0;
+    max-width: 50%;
+    min-width: 30%;
+    display: inline-block;
+}
+/* End current chat */
+
+/* Type message */
+.type-message i {
+    width: 100%;
+    color: #6a7376;
+    font-size: 20px;
+    padding: 0 30px;
+}
+
+.type-message {
+    display: flex;
+    padding: 8px 0;
+    background-color: #f3eeea;
+    align-items: center;
+}
+
+.text-field {
+    flex-grow: 1;
+}
+
+.text-field input {
+    border: 1px solid #f3eeea;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* End type message */
+
+.active {
+    background-color: lightgrey;
+}
+
+/* Gestione messaggi tra utente e interlocutore */
+.sent {
+    background-color: #d5f9ba;
+    float: right;
+    clear: both;
+}
+
+.received {
+    background-color: #ffffff;
+    float: left;
+    clear: both;
+}
