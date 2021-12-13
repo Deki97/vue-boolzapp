@@ -3,8 +3,8 @@
 // [x] Click sul contatto mostra la conversazione del contatto cliccato
 
 // Milestone 3
-// Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-// Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+// [x] Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+// [x] Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 // Milestone 4, opzionale per oggi:
 // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
@@ -122,6 +122,17 @@ const app = new Vue(
                 // alert(this.myMessage);
 
                 this.myMessage = ''
+            },
+            autoReplyOk: function() {
+                setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push(
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'ok',
+                            status: 'received'
+                        }
+                    );
+                }, 1000);
             }
         }
     }
