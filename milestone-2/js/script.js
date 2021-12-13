@@ -16,6 +16,7 @@ const app = new Vue(
     {
         el: '#root',
         data: {
+            myMessage: '',
             activeContact: 0,
             contacts: [
                 {
@@ -107,6 +108,18 @@ const app = new Vue(
             changeContact: function(index) {
                 this.activeContact = index;
                 // alert(this.activeContact);
+            },
+            newSentMessage: function() {
+                // alert(this.myMessage);
+
+                this.contacts[this.activeContact].messages.push(
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: this.myMessage,
+                        status: 'sent'
+                    }
+                );
+                // alert(this.myMessage);
             }
         }
     }
