@@ -133,7 +133,7 @@
                             </div>
 
                             <div class="text-field">
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input @keyup.enter="newSentMessage" type="text" placeholder="Scrivi un messaggio" v-model="myMessage">
                             </div>
 
                             <div class="voice message">
