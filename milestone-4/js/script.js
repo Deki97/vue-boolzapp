@@ -139,9 +139,13 @@ const app = new Vue(
                 return dayjs().format("DD/MM/YYYY HH:mm:ss");
             },
             searchUserList: function() {
-                
-                // test
-                alert(this.searchResult);
+                this.contacts.forEach((element) => {
+                    if(element.name.toLowerCase().includes(this.searchResult.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
             }
         }
     }

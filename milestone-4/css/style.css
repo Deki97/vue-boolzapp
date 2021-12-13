@@ -291,3 +291,13 @@ ul {
     float: left;
     clear: both;
 }
+
+
+/* Gestione del filtro ricerca utente */
+.true {
+    display: block;
+}
+
+.false {
+    display: none;
+}
