@@ -120,6 +120,8 @@ const app = new Vue(
                     }
                 );
                 // alert(this.myMessage);
+
+                this.myMessage = ''
             }
         }
     }
