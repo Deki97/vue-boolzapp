@@ -161,6 +161,10 @@ const app = new Vue(
             },
             showMessageOptions: function() {
                 // alert('test options');
+
+                const optionsDiv = document.getElementById('single-chat-options');
+                // console.log(optionsDiv);
+                optionsDiv.style.display = "block";
             }
         }
     }

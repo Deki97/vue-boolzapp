@@ -272,12 +272,17 @@ ul {
     position: absolute;
     background-color: white;
     z-index: 1020;
-    bottom: -45px;
+    bottom: -85px;
     right: 15px;
     padding: 10px 15px;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    /* display: none; */
+    display: none;
+}
+
+.chat-options div {
+    padding: 10px 0;
+    cursor: pointer;
 }
 /* End chat options on arrow click */
 

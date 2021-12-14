@@ -133,11 +133,11 @@
                                 <li v-for="(element, index) in contacts[activeContact].messages"
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
-                                    <div class="single-message-date">{{ element.date}}</div>
+                                    <div class="single-message-date">{{ element.date }}</div>
                                     <i @click="showMessageOptions" class="fas fa-chevron-down"></i>
 
                                     <!-- Div che appare al click della arrow down, inizialmente hidden e poi visibile -->
-                                    <div class="chat-options">
+                                    <div id="single-chat-options" class="chat-options">
                                         <div>
                                             Message Info
                                         </div>
