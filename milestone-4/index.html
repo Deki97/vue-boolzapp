@@ -72,9 +72,11 @@
                                     <img src="img/avatar_4.jpg" alt="Avatar 4">
                                     <span>Luisa</span>
                                 </li> -->
-                                
-                                <!-- :class="contact.visible === 'true' ? 'true' : 'false'" -->
-                                <li @click="changeContact(index)" v-for="(contact, index) in contacts">
+
+                                <li v-if="contact.visible"
+                                    @click="changeContact(index)" 
+                                    v-for="(contact, index) in contacts"
+                                >
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
                                 </li>
