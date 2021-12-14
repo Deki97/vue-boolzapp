@@ -74,8 +74,9 @@
                                 </li> -->
 
                                 <li v-if="contact.visible"
-                                    @click="changeContact(index)" 
                                     v-for="(contact, index) in contacts"
+                                    :class="{ 'active' : index === activeContact}" 
+                                    @click="changeContact(index)"
                                 >
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
@@ -133,6 +134,7 @@
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
                                     <div class="single-message-date">{{ element.date}}</div>
+                                    <i class="fas fa-chevron-down"></i>
                                 </li>
                             </ul>
                         </div>

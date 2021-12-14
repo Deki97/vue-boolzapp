@@ -120,13 +120,15 @@ const app = new Vue(
             newSentMessage: function() {
                 // alert(this.myMessage);
 
-                this.contacts[this.activeContact].messages.push(
-                    {
-                        date: this.getCurrentDateAndTime(),
-                        text: this.myMessage,
-                        status: 'sent'
-                    }
-                );
+                if(this.myMessage.trim().length > 0) {
+                    this.contacts[this.activeContact].messages.push(
+                        {
+                            date: this.getCurrentDateAndTime(),
+                            text: this.myMessage,
+                            status: 'sent'
+                        }
+                    );
+                }
                 // alert(this.myMessage);
 
                 this.myMessage = ''

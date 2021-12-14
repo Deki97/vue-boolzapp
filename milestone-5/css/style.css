@@ -157,6 +157,10 @@ ul {
     border-bottom: 1px solid #eaeaea;
     cursor: pointer;
 }
+
+.active {
+    background-color: lightgrey;
+}
 /* END LEFT COLUMN */
 
 
@@ -207,6 +211,23 @@ ul {
 .current-user-actions i {
     padding: 0 5px;
     color: #b1b1b1;
+}
+
+.current-chat ul li {
+    position: relative;
+    padding-right: 20px;
+}
+
+.current-chat ul li i {
+    position: absolute;
+    font-size: 10px;
+    top: 18px;
+    right: 5px;
+    display: none;
+}
+
+.current-chat ul li:hover i {
+    display: block;
 }
 /* End current user */
 
@@ -272,9 +293,6 @@ ul {
 
 /* End type message */
 
-.active {
-    background-color: lightgrey;
-}
 
 
 /* Gestione messaggi tra utente e interlocutore */
