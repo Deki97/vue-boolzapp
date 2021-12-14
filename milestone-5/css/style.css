@@ -332,3 +332,8 @@ ul {
     float: left;
     clear: both;
 }
+
+.block {
+    display: block;
+}
+

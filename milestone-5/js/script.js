@@ -164,7 +164,8 @@ const app = new Vue(
 
                 const optionsDiv = document.getElementById('single-chat-options');
                 // console.log(optionsDiv);
-                optionsDiv.style.display = "block";
+                // optionsDiv.style.display = "block";
+                optionsDiv.classList.toggle("block");
             }
         }
     }
