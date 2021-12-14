@@ -134,7 +134,18 @@
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
                                     <div class="single-message-date">{{ element.date}}</div>
-                                    <i class="fas fa-chevron-down"></i>
+                                    <i @click="showMessageOptions" class="fas fa-chevron-down"></i>
+
+                                    <!-- Div che appare al click della arrow down, inizialmente hidden e poi visibile -->
+                                    <div class="chat-options">
+                                        <div>
+                                            Message Info
+                                        </div>
+
+                                        <div>
+                                            Delete message
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

@@ -158,6 +158,9 @@ const app = new Vue(
                         element.visible = false;
                     }
                 });
+            },
+            showMessageOptions: function() {
+                // alert('test options');
             }
         }
     }

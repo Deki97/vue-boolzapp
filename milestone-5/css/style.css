@@ -228,6 +228,7 @@ ul {
 
 .current-chat ul li:hover i {
     display: block;
+    cursor: pointer;
 }
 /* End current user */
 
@@ -263,6 +264,23 @@ ul {
     font-size: 9px;
     color: grey;
 }
+
+
+/* Chat options on arrow click */
+.chat-options {
+    font-size: 15px;
+    position: absolute;
+    background-color: white;
+    z-index: 1020;
+    bottom: -45px;
+    right: 15px;
+    padding: 10px 15px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    /* display: none; */
+}
+/* End chat options on arrow click */
+
 /* End current chat */
 
 /* Type message */
