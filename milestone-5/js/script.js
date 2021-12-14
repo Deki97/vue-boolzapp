@@ -160,7 +160,7 @@ const app = new Vue(
                 });
             },
             showMessageOptions: function(index) {
-
+                
                 const optionsDiv = document.getElementById('single-chat-options');
                 optionsDiv.classList.toggle("block");
 
