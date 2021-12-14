@@ -7,7 +7,7 @@
 // [x] Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 // Milestone 4, opzionale per oggi:
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+// [x] Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 
 Vue.config.devtools = true;
 
@@ -106,10 +106,12 @@ const app = new Vue(
             ]
         },
         methods: {
+            // Al click del contatto nella lista di sinistra, compare la conversazione con quel contatto a destra
             changeContact: function(index) {
                 this.activeContact = index;
                 // alert(this.activeContact);
             },
+            // Invio di un nuovo messaggio che viene aggiunto come nuovo oggetto nei messaggi del contatto attivo
             newSentMessage: function() {
                 // alert(this.myMessage);
 
@@ -124,6 +126,7 @@ const app = new Vue(
 
                 this.myMessage = ''
             },
+            // Funzione di risposta automatica che dopo 1 secondo risponde con 'ok'
             autoReplyOk: function() {
                 setTimeout(() => {
                     this.contacts[this.activeContact].messages.push(
@@ -135,9 +138,11 @@ const app = new Vue(
                     );
                 }, 1000);
             },
+            // Metodo tramite day.js per ottenere data e ora correnti
             getCurrentDateAndTime() {
                 return dayjs().format("DD/MM/YYYY HH:mm:ss");
             },
+            // Funzione di ricerca per filtrare le chat in base al nome dell'utente
             searchUserList: function() {
                 this.contacts.forEach((element) => {
                     if(element.name.toLowerCase().includes(this.searchResult.toLowerCase())) {
