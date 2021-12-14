@@ -159,13 +159,17 @@ const app = new Vue(
                     }
                 });
             },
-            showMessageOptions: function() {
-                // alert('test options');
+            showMessageOptions: function(index) {
 
                 const optionsDiv = document.getElementById('single-chat-options');
-                // console.log(optionsDiv);
-                // optionsDiv.style.display = "block";
                 optionsDiv.classList.toggle("block");
+
+                // Indice di ogni messaggio sul quale clicco
+                // console.log(index);
+            },
+            deleteCurrentMessage: function(index) {
+                // alert('test');
+                this.contacts[this.activeContact].messages.splice(index, 1);
             }
         }
     }

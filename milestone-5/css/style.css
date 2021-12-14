@@ -333,6 +333,8 @@ ul {
     clear: both;
 }
 
+
+/* Classe per gestire la visibilità del menu a tendina onclick della arrow down */
 .block {
     display: block;
 }

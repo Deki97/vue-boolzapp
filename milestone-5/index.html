@@ -80,6 +80,11 @@
                                 >
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                     <span>{{ contact.name }}</span>
+                                    
+                                    <!-- Div che contiene l'ultimo messaggio della rispettiva chat -->
+                                    <!-- <div>
+                                        {{ contact.messages[activeContact].text }}
+                                    </div> -->
                                 </li>
                             </ul>
                         </div>
@@ -134,7 +139,7 @@
                                 :class="element.status === 'sent' ? 'sent' : 'received'">
                                     {{ element.text }}
                                     <div class="single-message-date">{{ element.date }}</div>
-                                    <i @click="showMessageOptions" class="fas fa-chevron-down"></i>
+                                    <i @click="showMessageOptions(index)" class="fas fa-chevron-down"></i>
 
                                     <!-- Div che appare al click della arrow down, inizialmente hidden e poi visibile -->
                                     <div id="single-chat-options" class="chat-options">
@@ -142,7 +147,7 @@
                                             Message Info
                                         </div>
 
-                                        <div>
+                                        <div @click="deleteCurrentMessage(index)" >
                                             Delete message
                                         </div>
                                     </div>
