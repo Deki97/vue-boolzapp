@@ -142,7 +142,7 @@
                                     <i @click="showMessageOptions(index)" class="fas fa-chevron-down"></i>
 
                                     <!-- Div che appare al click della arrow down, inizialmente hidden e poi visibile -->
-                                    <div id="single-chat-options" class="chat-options">
+                                    <div v-if="index === activeMessage" id="single-chat-options" class="chat-options">
                                         <div>
                                             Message Info
                                         </div>

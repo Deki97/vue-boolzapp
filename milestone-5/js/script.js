@@ -24,6 +24,7 @@ const app = new Vue(
             myMessage: '',
             activeContact: 0,
             searchResult: '',
+            activeMessage: 0,
             contacts: [
                 {
                     name: 'Michele',
